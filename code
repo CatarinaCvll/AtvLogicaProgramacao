@@ -1,0 +1,99 @@
+whenSetup(function () {
+  makeNewDanceSpriteGroup(12, "SHARK", "circle");
+  makeAnonymousDanceSprite("UNICORN", {x: 200, y: 200});
+  setForegroundEffectExtended("spotlight");
+  setBackgroundEffectWithPalette("ripples", "electronic");
+  changeMoveEachLR("UNICORN", MOVES.Kick, -1);
+});
+
+atTimestamp(41, "measures", function () {
+  });
+
+whenKey("up", function () {
+  setVisibleEach("SHARK", false);
+});
+
+whenKey("down", function () {
+  setVisibleEach("SHARK", true);
+});
+
+atTimestamp(54, "measures", function () {
+  setVisibleEach(sprites, false);
+  setBackgroundEffectWithPalette("ripples", "electronic");
+});
+
+atTimestamp(1, "seconds", function () {
+  changeMoveEachLR("SHARK", MOVES.ClapHigh, -1);
+});
+
+everySeconds(2, "measures", function () {
+  alternateMoves("SHARK", 1, MOVES.Floss, MOVES.ClapHigh);
+});
+
+atTimestamp(55, "measures", function () {
+  setBackgroundEffectWithPalette("text", "neon");
+  setForegroundEffectExtended("confetti");
+});
+
+atTimestamp(4, "measures", function () {
+  changeMoveEachLR("UNICORN", MOVES.ThisOrThat, -1);
+});
+
+atTimestamp(8, "measures", function () {
+  setForegroundEffectExtended("color_lights");
+  changeMoveEachLR("UNICORN", MOVES.Floss, -1);
+});
+
+atTimestamp(12, "measures", function () {
+  changeMoveEachLR("UNICORN", MOVES.ClapHigh, -1);
+  setBackgroundEffectWithPalette("lasers", "electronic");
+  setForegroundEffectExtended("music_notes");
+});
+
+atTimestamp(17, "measures", function () {
+  changeMoveEachLR("UNICORN", MOVES.Roll, -1);
+});
+
+atTimestamp(20, "measures", function () {
+  changeMoveEachLR("UNICORN", MOVES.ThisOrThat, -1);
+});
+
+atTimestamp(25, "measures", function () {
+  changeMoveEachLR("UNICORN", MOVES.Fresh, -1);
+  setBackgroundEffectWithPalette("sparkles", "tropical");
+});
+
+atTimestamp(28, "measures", function () {
+  changeMoveEachLR("UNICORN", MOVES.Roll, -1);
+});
+
+atTimestamp(32, "measures", function () {
+  changeMoveEachLR("UNICORN", "next", -1);
+  setBackgroundEffectWithPalette("fireworks", "electronic");
+  setForegroundEffectExtended("color_lights");
+});
+
+atTimestamp(35, "measures", function () {
+  changeMoveEachLR("UNICORN", "prev", -1);
+});
+
+atTimestamp(38, "measures", function () {
+  doMoveEachLR("UNICORN", MOVES.XBend, -1);
+});
+
+atTimestamp(42, "measures", function () {
+  changeMoveEachLR("UNICORN", MOVES.Kick, -1);
+});
+
+atTimestamp(45, "measures", function () {
+  changeMoveEachLR("UNICORN", MOVES.ThisOrThat, -1);
+  setBackgroundEffectWithPalette("music_wave", "neon");
+});
+
+atTimestamp(49, "measures", function () {
+  changeMoveEachLR("UNICORN", MOVES.ClapHigh, -1);
+});
+
+atTimestamp(54, "measures", function () {
+  changeMoveEachLR("UNICORN", "next", -1);
+});
